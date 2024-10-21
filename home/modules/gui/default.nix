@@ -42,6 +42,7 @@
     hyprlock # lockscreen
     pinta
     xfce.thunar
+    foot
   ];
 
   gtk = {

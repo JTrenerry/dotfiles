@@ -27,6 +27,8 @@
     };
 
     plugins = {
+      web-devicons.enable = true;
+
       # TODO: simple plugin configs can go here though
       gitsigns = {
         enable = true;
