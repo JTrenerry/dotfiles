@@ -6,7 +6,6 @@
 │   │   └── mimikyu
 │   └── modules
 │       ├── gui
-│       │   ├── hyprland
 │       │   └── rofi
 │       └── tui
 │           ├── dev
