@@ -30,5 +30,7 @@ pkgs.writeScriptBin "switch" ''
       print "Switching HM";
       ${nh} home switch ${nix-path} --ask -- --impure;
     };
+
+    notify-send "Build finished"
   }
 ''

@@ -10,7 +10,8 @@
       ./packages.nix  # System wide packages
       ./scripts # This computer specific scripts i.e. move
 
-      inputs.hyprland.nixosModules.default
+      #  inputs.hyprland.nixosModules.default
+      inputs.niri.nixosModules.niri
 
       ./hardware-configuration.nix
     ];
@@ -25,8 +26,6 @@
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   };
   nixpkgs.overlays = [ inputs.niri.overlays.niri ];
-  programs.
-  programs.
 
   # SERVICES
   services = {
@@ -169,7 +168,8 @@
     #  hyprland.enable = true;
     #  hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
     niri.package = pkgs.niri-unstable;
-    niri.enable = true;                 };
+    niri.enable = true;
+  };
 
   # NIXPKGS
   nixpkgs.config.allowUnfree = true; # Allows unfree packages

@@ -5,14 +5,15 @@
     # TODO Import new gui modules here
     ./kitty.nix
     ./cava.nix
-    ./dunst.nix # to be replaced by ags
+    ./dunst.nix
     ./stylix.nix
     ./spotify.nix
-
-    ./ags
-    #./hyprland
     ./niri.nix
-    ./rofi # to be replaced by ags
+    ./waybar.nix
+    ./hyprlock.nix
+
+    #./ags
+    ./rofi
   ];
 
   home.packages = with pkgs; [

@@ -5,7 +5,7 @@ const battery = await Service.import("battery")
 const systemtray = await Service.import("systemtray")
 const network = await Service.import('network')
 
-import { Workspaces } from './modules/workspaces';
+//import { Workspaces } from './modules/workspaces';
 import { Clock } from './modules/clock';
 
 // we don't need dunst or any other notification daemon
@@ -148,7 +148,7 @@ function Left() {
     return Widget.Box({
         spacing: 8,
         children: [
-            Workspaces(),
+      //      Workspaces(),
         ],
     })
 }

@@ -7,13 +7,6 @@
 
   xdg.configFile."hypr/hyprmonitors.conf".text = ''
   '';
-  xdg.configFile."hypr/hypridle.conf".text = ''
-    general {
-        lock_cmd = pidof hyprlock || hyprlock       # avoid starting multiple hyprlock instances.
-        before_sleep_cmd = loginctl lock-session    # lock before suspend.
-        after_sleep_cmd = hyprctl dispatch dpms on  # to avoid having to press a key twice to turn on the display.
-    }
-  '';
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [

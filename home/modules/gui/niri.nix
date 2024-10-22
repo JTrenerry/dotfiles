@@ -16,19 +16,19 @@
     prefer-no-csd = true;
 
     spawn-at-startup = [
-      # {
-      # command = [
-      #   "dbus-update-activation-environment"
-      #   "--systemd"
-      #   "WAYLAND_DISPLAY"
-      #   "XDG_CURRENT_DESKTOP"
-      # ];
-      # }
+      {
+      command = [
+        "dbus-update-activation-environment"
+        "--systemd"
+        "WAYLAND_DISPLAY"
+        "XDG_CURRENT_DESKTOP"
+      ];
+      }
       { command = [ "${pkgs.xwayland-satellite}/bin/xwayland-satellite" ]; }
       { command = [ "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1" ]; }
       { command = [ "${pkgs.hypridle}/bin/hypridle" ]; }
-      # { command = [ "${pkgs.hyprlock}/bin/hyprlock" ]; }
-      { command = [ "ags" "-b hypr -c /home/jackson/Documents/Code/nix/home/hosts/glaceon/ags/config.js"]; }
+      { command = [ "${pkgs.hyprlock}/bin/hyprlock" ]; }
+      { command = [ "ags" "-b" "hypr" "-c" "/home/jackson/Documents/Code/nix/home/hosts/glaceon/ags/config.js"]; }
       {
         command = [
           "swww"
@@ -42,7 +42,7 @@
       warp-mouse-to-focus = true;
     };
 
-    outputs."eDP-1".scale = 1.2;
+    outputs."eDP-1".scale = 1;
 
     environment = {
       QT_QPA_PLATFORM = "wayland";
