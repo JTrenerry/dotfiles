@@ -28,7 +28,7 @@
       { command = [ "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1" ]; }
       { command = [ "${pkgs.hypridle}/bin/hypridle" ]; }
       { command = [ "${pkgs.hyprlock}/bin/hyprlock" ]; }
-      { command = [ "ags" "-b" "hypr" "-c" "/home/jackson/Documents/Code/nix/home/hosts/glaceon/ags/config.js"]; }
+      { command = [ "waybar"]; }
       {
         command = [
           "swww"

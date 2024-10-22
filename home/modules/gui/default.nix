@@ -12,7 +12,6 @@
     ./waybar.nix
     ./hyprlock.nix
 
-    #./ags
     ./rofi
   ];
 

@@ -14,7 +14,6 @@
         ];
 
         modules-center = [
-          "hyprland/workspaces"
         ];
 
         modules-right = [
@@ -24,13 +23,6 @@
           "battery"
           "clock"
         ];
-
-        "hyprland/workspaces" = {
-	      format = "{icon}";
-	      on-click = "activate";
-	      all-outputs = true;
-          sort-by-number = true;
-        };
 
         "tray" = {
           spacing =12;
