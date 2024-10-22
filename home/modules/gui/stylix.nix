@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  options,
   ...
 }:
 {
@@ -21,7 +22,7 @@
       spicetify.enable = false;
     };
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/${options.colours.stylix}.yaml";
     image = ~/.wallpaper;
   };
 }
