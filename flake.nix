@@ -30,6 +30,7 @@
     };
 
     ags.url = "github:Aylur/ags";
+    niri.url = "github:sodiboo/niri-flake";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: let

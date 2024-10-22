@@ -1,7 +1,7 @@
 {
   pkgs,
   inputs,
-  options,
+  config,
   ...
 }:
 {
@@ -22,7 +22,7 @@
       spicetify.enable = false;
     };
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/${options.colours.stylix}.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/${config.colours.kebab}.yaml";
     image = ~/.wallpaper;
   };
 }

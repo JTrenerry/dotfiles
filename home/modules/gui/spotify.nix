@@ -1,4 +1,4 @@
-  { pkgs, lib, system, inputs, ... }:
+  { pkgs, lib, system, inputs, config,  ... }:
 let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${system};
 in
@@ -11,7 +11,7 @@ in
     spicetify = {
       enable = true;
       theme = spicePkgs.themes.ziro;
-      colorScheme = "rose-pine-moon";
+      colorScheme = "${config.colours.kebab}";
     };
   };
 }

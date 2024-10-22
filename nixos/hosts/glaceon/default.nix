@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, inputs, ... }:
+{ config, pkgs, lib, inputs, username, ... }:
 
 {
   imports =
@@ -24,6 +24,9 @@
 
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   };
+  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+  programs.
+  programs.
 
   # SERVICES
   services = {
@@ -40,18 +43,28 @@
 
     # PRINTING
     printing.enable = true;
-
-    # GREETD / GREETER
+    fprintd.enable = true;
     greetd = {
       enable = true;
       settings = rec {
         initial_session = {
-          command = "${inputs.hyprland.packages.x86_64-linux.default}/bin/Hyprland";
-          user = "jackson";
+          command = "${pkgs.niri-unstable}/bin/niri-session";
+          user = "${username}";
         };
         default_session = initial_session;
       };
     };
+    #    # GREETD / GREETER
+    #    greetd = {
+    #      enable = true;
+    #      settings = rec {
+    #        initial_session = {
+    #          command = "${inputs.hyprland.packages.x86_64-linux.default}/bin/Hyprland";
+    #          user = "jackson";
+    #        };
+    #        default_session = initial_session;
+    #      };
+    #    };
 
     # PIPEWIRE
     pipewire = {
@@ -153,9 +166,10 @@
     firefox.enable = true;
 
     # HYPRLAND
-    hyprland.enable = true;
-    hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-  };
+    #  hyprland.enable = true;
+    #  hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    niri.package = pkgs.niri-unstable;
+    niri.enable = true;                 };
 
   # NIXPKGS
   nixpkgs.config.allowUnfree = true; # Allows unfree packages
@@ -163,10 +177,10 @@
   # ENVIRONMENT
   environment = {
     variables = {
-      XDG_CURRENT_DESKTOP = "Hyprland";
+      #  XDG_CURRENT_DESKTOP = "Hyprland";
       USE_WAYLAND_GRIM = "1";
       XDG_SESSION_TYPE = "wayland";
-      XDG_SESSION_DESKTOP = "Hyprland";
+      #   XDG_SESSION_DESKTOP = "Hyprland";
       _JAVA_AWT_WM_NONREPARENTING = 1;
       MOZ_ENABLE_WAYLAND = "1";
       WLR_NO_HARDWARE_CURSORS = "1";

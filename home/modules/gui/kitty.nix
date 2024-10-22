@@ -1,8 +1,10 @@
+{ config, ... }:
+
 {
   programs = {
     kitty = {
       enable = true;
-      themeFile = "rose-pine-moon";
+      themeFile = "${config.colours.kebab}";
     };
   };
 }

@@ -10,7 +10,8 @@
     ./spotify.nix
 
     ./ags
-    ./hyprland
+    #./hyprland
+    ./niri.nix
     ./rofi # to be replaced by ags
   ];
 
