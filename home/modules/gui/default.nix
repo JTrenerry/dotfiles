@@ -44,6 +44,7 @@
     pinta
     xfce.thunar
     foot
+    swww
   ];
 
   gtk = {
