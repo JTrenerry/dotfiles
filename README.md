@@ -3,17 +3,9 @@
 ├── home
 │   ├── hosts
 │   │   ├── glaceon
-│   │   │   └── ags
-│   │   │       ├── lib
-│   │   │       └── widget
-│   │   │           ├── bar
-│   │   │           │   └── modules
-│   │   │           └── notifications
 │   │   └── mimikyu
 │   └── modules
 │       ├── gui
-│       │   ├── ags
-│       │   ├── hyprland
 │       │   └── rofi
 │       └── tui
 │           ├── dev
