@@ -47,6 +47,7 @@
       unzip
       zip
       htop
+      btop
 
       # Connections
       bluetuith
