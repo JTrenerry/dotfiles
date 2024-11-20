@@ -1,24 +1,26 @@
-{ config, lib, ... }:
-
-with lib;
-
 {
-  config.colours.col1 = "#232136";
-  config.colours.col2 = "#2a273f";
-  config.colours.col3 = "#393552";
-  config.colours.col4 = "#6e6a86";
-  config.colours.col5 = "#908caa";
-  config.colours.col6 = "#e0def4";
-  config.colours.col7 = "#eb6f92";
-  config.colours.col8 = "#f6c177";
-  config.colours.col9 = "#ea9a97";
-  config.colours.col10 = "#3e8fb0";
-  config.colours.col11 = "#9ccfd8";
-  config.colours.col12 = "#c4a7e7";
-  config.colours.col13 = "#2a283e";
-  config.colours.col14 = "#44415a";
-  config.colours.col15 = "#56526e";
-  config.colours.col16 = "#95b1ac";
+  config.colours.base = "#232136";
+  config.colours.surface = "#2a273f";
+  config.colours.overlay = "#393552";
 
-  config.colours.kebab = "rose-pine-moon"; # New Stylix theme
+  config.colours.muted = "#6e6a86";
+  config.colours.subtle = "#908caa";
+  config.colours.text = "#e0def4";
+
+  config.colours.red = "#eb6f92";
+  config.colours.orange = "#ea9a97";
+  config.colours.yellow = "#f6c177";
+  config.colours.green = "#95b1ac";
+  config.colours.aqua = "#9ccfd8";
+  config.colours.blue = "#3e8fb0";
+  config.colours.purple = "#c4a7e7";
+
+  config.colours.highL = "#2a283e";
+  config.colours.highM = "#44415a";
+  config.colours.highH = "#56526e";
+
+  config.colours.kebab = "rose-pine-moon";
+  config.colours.spicetify-theme = "spicePkgs.themes.ziro";
+  config.colours.icon-package = "pkgs.rose-pine-icon-theme";
+  config.colours.rofi = "./rose-pine-moon.rasi";
 }

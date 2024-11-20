@@ -1,4 +1,4 @@
-{ pkgs, ...}:
+{ pkgs, config, ...}:
 
 {
   programs = {
@@ -19,7 +19,7 @@
         show-icons = true;
       };
       package = pkgs.rofi-wayland;
-      theme = ./theme.rasi;
+      theme = "${config.colours.rofi}";
     };
   };
 }

@@ -1,4 +1,4 @@
-{ pkgs, lib, inputs, ... }:
+{ pkgs, lib, inputs, config, ... }:
 
 {
   imports = [
@@ -26,8 +26,6 @@
     # IM / Editors
     vesktop # to do be moved for conf stuff
 
-    xorg.xrandr
-
     # Office / Productivity / IDE
     jetbrains.idea-ultimate # Java IDE
     obsidian # Note taking app
@@ -41,28 +39,18 @@
     postman # API docs
     grimblast #screenshot
     hyprlock # lockscreen
-    pinta
-    xfce.thunar
-    foot
-    swww
+    pinta   # Image editor
+    xfce.thunar   # File system visual
+    foot   # Backup terminal
+    swww   # Wallpaper
   ];
 
   gtk = {
     enable = true;
 
-    # cursorTheme = {
-    #   package = pkgs.rose-pine-cursor;
-    #   name = "rose-pine-moon";
-    # };
-
-    # theme = {
-    #   package = pkgs.rose-pine-gtk-theme;
-    #   name = "rose-pine-moon";
-    # };
-
     iconTheme = {
-      package = pkgs.rose-pine-icon-theme;
-      name = "rose-pine-moon";
+      package = "${config.colours.icon-package}";
+      name = "${config.colours.kebab}";
     };
   };
 }

@@ -5,91 +5,118 @@ with lib;
 {
   options.colours = {
     # Colours
-    col1 = mkOption {
+    base = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 1";
+      description = "Main and accessory panels";
     };
-    col2 = mkOption {
+    surface = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 2";
+      description = "Panels that are not directly related to the focal context";
     };
-    col3 = mkOption {
+    overlay = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 3";
+      description = "Panels that are more temporary in nature";
     };
-    col4 = mkOption {
+    muted = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 4";
+      description = "Ignored Content";
     };
-    col5 = mkOption {
+    subtle = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 5";
+      description = "Secondary content";
     };
-    col6 = mkOption {
+    text = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 6";
+      description = "Primary content";
     };
-    col7 = mkOption {
+    red = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 7";
+      description = "Red";
     };
-    col8 = mkOption {
+    orange = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 8";
+      description = "Orange";
     };
-    col9 = mkOption {
+    yellow = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 9";
+      description = "Yellow";
     };
-    col10 = mkOption {
+    green = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 10";
+      description = "Green";
     };
-    col11 = mkOption {
+    aqua = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 11";
+      description = "Aqua";
     };
-    col12 = mkOption {
+    blue = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 12";
+      description = "Blue";
     };
-    col13 = mkOption {
+    purple = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 13";
+      description = "purple";
     };
-    col14 = mkOption {
+    highL = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 14";
+      description = "Highlight Low";
     };
-    col15 = mkOption {
+    highM = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 15";
+      description = "Highlight Med";
     };
-    col16 = mkOption {
+    highH = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Color 16";
+      description = "Highlight High";
     };
-    # Stylix
+
+
+    # Kebab cased
     kebab = mkOption {
       type = types.str;
       default = "";  # Default set to ""
-      description = "Stylix theme.";
+      description = "Stylix theme etc.";
+    };
+
+    spicetify = mkOption {
+      type = types.str;
+      default = "";
+      description = "Spicetify theme";
+    };
+
+    spicetify-theme = mkOption {
+      type = types.str;
+      default = "";
+      description = "Spicetify theme";
+    };
+
+    # Icon Package
+    icon-package = mkOption {
+      type = types.str;
+      default = "";
+      description = "The icon package to use";
+    };
+    # Rofi theme
+    rofi = mkOption {
+      type = types.str;
+      default = "";
+      description = "Theme for Rofi, should be a path or a named theme";
     };
   };
 }

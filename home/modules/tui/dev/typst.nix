@@ -3,6 +3,7 @@
     packages = with pkgs; [
       typst
       typstyle
+      zathura
     ];
   };
 

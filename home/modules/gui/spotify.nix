@@ -1,6 +1,8 @@
   { pkgs, lib, system, inputs, config,  ... }:
 let
-  spicePkgs = inputs.spicetify-nix.legacyPackages.${system};
+    spicePkgs = inputs.spicetify-nix.legacyPackages.${system};
+
+    colour = if config.colours.spicetify == "" then config.colours.kebab else config.colours.spicetify;
 in
 {
   # import the flake's module for your system
@@ -10,8 +12,8 @@ in
   programs = {
     spicetify = {
       enable = true;
-      theme = spicePkgs.themes.ziro;
-      colorScheme = "${config.colours.kebab}";
+      theme = "${config.colours.spicetify-theme}";
+      colorScheme = "${colour}";
     };
   };
 }
