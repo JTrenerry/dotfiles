@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nix-index-database.url = "github:Mic92/nix-index-database";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -34,60 +35,6 @@
     commonix.url = "github:McArthur-Alford/commonix";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: let
-    inherit (self) outputs;
-    stateVersion = "24.05";
-    lib = import ./lib {
-      inherit
-        inputs
-        stateVersion
-        outputs
-        nixpkgs
-        ;
-    };
-  in {
-    nixosConfigurations = {
-      "glaceon" = lib.mkHost {
-        hostname = "glaceon";
-        username = "jackson";
-        system = "x86_64-linux";
-        desktop = "rose";
-        nix-path = "/home/jackson/Documents/Code/nix";
-      };
-
-      "mimikyu" = lib.mkHost {
-        hostname = "mimikyu";
-        username = "jackson";
-        system = "x86_64-linux";
-        nix-path = "/home/jackson/nix-config";
-      };
-    };
-
-    homeConfigurations = {
-      "jackson@glaceon" = lib.mkHome {
-        hostname = "glaceon";
-        username = "jackson";
-        system = "x86_64-linux";
-        shell = "rose";
-        desktop = "rose";
-        nix-path = "/home/jackson/Documents/Code/nix";
-      };
-
-      "jackson@mimikyu" = lib.mkHome {
-        hostname = "mimikyu";
-        username = "jackson";
-        system = "x86_64-linux";
-        shell = "punk";
-        nix-path = "/home/jackson/nix-config";
-      };
-    };
-
-    devShells = lib.forAllSystems (
-      system:
-      let
-        pkgs = nixpkgs.legacyPackages.${system};
-      in
-      import ./shell.nix { inherit pkgs; }
-    );
-  };
+  outputs = { self, nixpkgs, ... }@inputs:
+  (inputs.commonix.generateOutputs { inherit self inputs; });
 }
