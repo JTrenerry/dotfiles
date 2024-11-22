@@ -90,7 +90,12 @@
   # NIX
   nix = {
     # Enable flakes
-    settings.experimental-features = [ "nix-command" "flakes" ];
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+
+      trusted-users = ["jackson"];
+    };
+
     # Remove old snapshots
     gc = { automatic = true; dates = "weekly"; options = "--delete-older-than 14d"; };
 

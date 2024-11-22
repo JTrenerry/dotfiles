@@ -49,7 +49,7 @@
     enable = true;
 
     iconTheme = {
-      package = "${config.colours.icon-package}";
+      package = pkgs.${config.colours.icon-package};
       name = "${config.colours.kebab}";
     };
   };

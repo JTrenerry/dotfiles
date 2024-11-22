@@ -15,11 +15,11 @@
         rofi-power-menu
       ];
       extraConfig = {
-        modes = "drun,calc,recursivebrowser";
+        modes = "drun,recursivebrowser";
         show-icons = true;
       };
       package = pkgs.rofi-wayland;
-      theme = "${config.colours.rofi}";
+      theme = config.colours.rofi;
     };
   };
 }

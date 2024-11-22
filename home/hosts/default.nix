@@ -97,7 +97,7 @@ with lib;
     spicetify = mkOption {
       type = types.str;
       default = "";
-      description = "Spicetify theme";
+      description = "Spicetify colours";
     };
 
     spicetify-theme = mkOption {
@@ -114,7 +114,7 @@ with lib;
     };
     # Rofi theme
     rofi = mkOption {
-      type = types.str;
+      type = types.path;
       default = "";
       description = "Theme for Rofi, should be a path or a named theme";
     };

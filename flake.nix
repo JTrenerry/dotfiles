@@ -30,6 +30,8 @@
     };
 
     niri.url = "github:sodiboo/niri-flake";
+
+    commonix.url = "github:McArthur-Alford/commonix";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: let

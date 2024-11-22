@@ -20,7 +20,7 @@
   config.colours.highH = "#56526e";
 
   config.colours.kebab = "rose-pine-moon";
-  config.colours.spicetify-theme = "spicePkgs.themes.ziro";
-  config.colours.icon-package = "pkgs.rose-pine-icon-theme";
-  config.colours.rofi = "./rose-pine-moon.rasi";
+  config.colours.spicetify-theme = "ziro";
+  config.colours.icon-package = "rose-pine-icon-theme";
+  config.colours.rofi = ../../modules/gui/rofi/rose-pine-moon.rasi;
 }

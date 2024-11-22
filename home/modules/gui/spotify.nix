@@ -12,7 +12,7 @@ in
   programs = {
     spicetify = {
       enable = true;
-      theme = "${config.colours.spicetify-theme}";
+      theme = spicePkgs.themes.${config.colours.spicetify-theme};
       colorScheme = "${colour}";
     };
   };
