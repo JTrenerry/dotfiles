@@ -36,7 +36,8 @@
       xdg-desktop-portal-gnome
       xdg-desktop-portal-gtk
       xdg-desktop-portal-wlr
-      # xdg-desktop-portal-hyprland
     ];
   };
+
+  programs.dconf.enable = true;
 }

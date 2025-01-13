@@ -2,7 +2,9 @@
   user = "jackson";
   theme = "rose";
   gui = {
-    desktop = "niri";
-    protocol = "wayland";
+    default = {
+      desktop = "niri";
+      protocol = "wayland";
+    };
   };
 }

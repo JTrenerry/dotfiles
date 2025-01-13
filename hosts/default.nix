@@ -41,13 +41,8 @@
     font-awesome
     corefonts
     material-design-icons
-    (nerdfonts.override {
-      fonts = [
-        "FiraCode"
-      ];
-    })
+    nerd-fonts.fira-code
     jetbrains-mono
-    nerdfonts
     comic-mono
   ];
 

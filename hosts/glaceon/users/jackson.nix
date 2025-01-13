@@ -2,7 +2,7 @@
 {
   users.users."jackson" = {
     isNormalUser = true;
-    description = "mcarthur";
+    description = "jackson";
     extraGroups = [
       "networkmanager"
       "wheel"

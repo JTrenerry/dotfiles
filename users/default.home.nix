@@ -12,6 +12,7 @@
     inputs.nix-index-database.hmModules.nix-index
 
     "${self}/modules/programs/stylix.home.nix"
+    "${self}/modules/programs/anyrun.home.nix"
   ];
 
   home.username = "${userSettings.user}";

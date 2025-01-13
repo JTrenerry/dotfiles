@@ -34,9 +34,6 @@
       }
       { command = [ "${pkgs.xwayland-satellite}/bin/xwayland-satellite" ]; }
       { command = [ "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1" ]; }
-      { command = [ "${pkgs.hypridle}/bin/hypridle" ]; }
-      { command = [ "${pkgs.hyprlock}/bin/hyprlock" ]; }
-      { command = [ "waybar"]; }
       {
         command = [
           "swww"
@@ -82,7 +79,7 @@
       "Mod+WheelScrollRight".action = focus-column-right;
       "Mod+WheelScrollLeft".action = focus-column-left;
       "Mod+Q".action = spawn "kitty";
-      "Mod+D".action = spawn "rofi" "-show" "drun";
+      "Mod+D".action = spawn "anyrun";
       "Mod+Escape".action = spawn "hyprlock";
       "Mod+Shift+M".action = quit { skip-confirmation = true; };
       "Mod+E".action = center-column;

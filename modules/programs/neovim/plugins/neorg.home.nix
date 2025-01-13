@@ -16,7 +16,7 @@
     plugins.neorg = {
       enable = false; # TODO re-enable when neorg is fixed
 
-      modules = {
+      settings.load = {
         "core.defaults".__empty = null;
 
         "core.keybinds".config.hook.__raw = ''

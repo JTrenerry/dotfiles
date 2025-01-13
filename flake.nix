@@ -31,8 +31,12 @@
     };
 
     niri.url = "github:sodiboo/niri-flake";
-
-    commonix.url = "github:McArthur-Alford/commonix";
+    anyrun = {
+      url = "github:anyrun-org/anyrun";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    anyrun-nixos-options.url = "github:n3oney/anyrun-nixos-options";
+    commonix.url = "path:/home/jackson/Documents/Code/commonix";
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
