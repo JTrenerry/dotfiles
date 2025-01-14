@@ -1,4 +1,4 @@
-{ pkgs, self, ... }:
+{ pkgs, self, userSettings, ... }:
 {
   imports = [
     "${self}/modules/programs/spotify.home.nix"
@@ -59,4 +59,13 @@
     rpi-imager
     acpi
   ];
+
+  gtk = {
+    enable = true;
+
+    iconTheme = {
+      package = pkgs.rose-pine-icon-theme;
+      name = "rose-pine-moon";
+    };
+  };
 }

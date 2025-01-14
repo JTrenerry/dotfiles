@@ -12,7 +12,6 @@
             # RL
             matplotlib
             numpy
-            torch
           ]
       ))
 

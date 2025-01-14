@@ -69,21 +69,47 @@
     };
 
     binds = with config.lib.niri.actions; rec {
+      # Utils
+      # Basics
       "Mod+C".action = close-window;
-      "Mod+S".action = screenshot;
-      "Mod+Period".action = consume-or-expel-window-right;
-      "Mod+Comma".action = consume-or-expel-window-left;
       "Mod+F".action = fullscreen-window;
-      "Mod+WheelScrollDown".action = focus-workspace-down;
-      "Mod+WheelScrollUp".action = focus-workspace-up;
-      "Mod+WheelScrollRight".action = focus-column-right;
-      "Mod+WheelScrollLeft".action = focus-column-left;
+
+      # Commands
+      "Mod+S".action = screenshot;
+      "Mod+Shift+Slash".action = show-hotkey-overlay;
+
+      "XF86AudioRaiseVolume" = {
+        allow-when-locked = true;
+        action = spawn "wpctl" "set-volume" "-l" "1.4" "@DEFAULT_AUDIO_SINK@" "5%+";
+      };
+      "XF86AudioLowerVolume" = {
+        allow-when-locked = true;
+        action = spawn "wpctl" "set-volume" "-l" "1.4" "@DEFAULT_AUDIO_SINK@" "5%-";
+      };
+      "XF86AudioMute" = {
+        allow-when-locked = true;
+        action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle";
+      };
+      "XF86AudioMicMute" = {
+        allow-when-locked = true;
+        action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle";
+      };
+
+      "XF86MonBrightnessUp".action = spawn "brightnessctl" "set" "5%+";
+      "XF86MonBrightnessDown".action = spawn "brightnessctl" "set" "5%-";
+
+      # Spawns
       "Mod+Q".action = spawn "kitty";
       "Mod+D".action = spawn "anyrun";
       "Mod+Escape".action = spawn "hyprlock";
+      "Mod+B".action = spawn "blueman-manager";
+      "Mod+V".action = spawn "pavucontrol";
+      "Mod+I".action = spawn "nm-connection-editor";
+
       "Mod+Shift+M".action = quit { skip-confirmation = true; };
-      "Mod+E".action = center-column;
+
       # Navigation:
+      "Mod+E".action = center-column;
       "Mod+H".action = focus-column-left-or-last;
       "Mod+L".action = focus-column-right-or-first;
       "Mod+K".action = focus-window-or-workspace-up;
@@ -92,24 +118,7 @@
       "Mod+Right".action = focus-column-right;
       "Mod+Up".action = focus-window-up;
       "Mod+Down".action = focus-window-down;
-      # Moving Windows:
-      "Mod+Shift+H".action = move-column-left;
-      "Mod+Shift+L".action = move-column-right;
-      "Mod+Shift+K".action = move-window-up-or-to-workspace-up;
-      "Mod+Shift+J".action = move-window-down-or-to-workspace-down;
-      "Mod+Shift+Left".action = move-column-left;
-      "Mod+Shift+Right".action = move-column-right;
-      "Mod+Shift+Up".action = move-window-up;
-      "Mod+Shift+Down".action = move-window-down;
-      "Mod+Ctrl+K".action = move-column-to-workspace-up;
-      "Mod+Ctrl+J".action = move-column-to-workspace-down;
-      # Resizing Windows:
-      "Mod+Minus".action = set-column-width "-5%";
-      "Mod+Equal".action = set-column-width "+5%";
-      "Mod+Plus".action = set-column-width "+5%";
-      "Mod+Shift+Minus".action = set-window-height "-5%";
-      "Mod+Shift+Equal".action = set-window-height "+5%";
-      "Mod+Shift+Plus".action = set-window-height "+5%";
+
       # Workspace Navigation
       "Mod+1".action = focus-workspace 1;
       "Mod+2".action = focus-workspace 2;
@@ -121,9 +130,38 @@
       "Mod+8".action = focus-workspace 8;
       "Mod+9".action = focus-workspace 9;
       "Mod+0".action = focus-workspace 0;
+
+      "Mod+WheelScrollDown".action = focus-workspace-down;
+      "Mod+WheelScrollUp".action = focus-workspace-up;
+      "Mod+WheelScrollRight".action = focus-column-right;
+      "Mod+WheelScrollLeft".action = focus-column-left;
+
+      # Moving Windows:
+      "Mod+Period".action = consume-or-expel-window-right;
+      "Mod+Comma".action = consume-or-expel-window-left;
+
+      "Mod+Shift+H".action = move-column-left;
+      "Mod+Shift+L".action = move-column-right;
+      "Mod+Shift+K".action = move-window-up-or-to-workspace-up;
+      "Mod+Shift+J".action = move-window-down-or-to-workspace-down;
+      "Mod+Shift+Left".action = move-column-left;
+      "Mod+Shift+Right".action = move-column-right;
+      "Mod+Shift+Up".action = move-window-up;
+      "Mod+Shift+Down".action = move-window-down;
+      "Mod+Ctrl+K".action = move-column-to-workspace-up;
+      "Mod+Ctrl+J".action = move-column-to-workspace-down;
+
       # Rearranging Workspaces
       "Mod+Ctrl+Shift+J".action = move-workspace-down;
       "Mod+Ctrl+Shift+K".action = move-workspace-up;
+
+      # Resizing Windows:
+      "Mod+Minus".action = set-column-width "-5%";
+      "Mod+Equal".action = set-column-width "+5%";
+      "Mod+Plus".action = set-column-width "+5%";
+      "Mod+Shift+Minus".action = set-window-height "-5%";
+      "Mod+Shift+Equal".action = set-window-height "+5%";
+      "Mod+Shift+Plus".action = set-window-height "+5%";
     };
   };
 }
