@@ -58,6 +58,7 @@
 
     rpi-imager
     acpi
+    platformio
   ];
 
   gtk = {
