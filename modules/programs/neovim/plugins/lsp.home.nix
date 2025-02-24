@@ -27,6 +27,10 @@
         servers = {
           clangd.enable = true;
           texlab.enable = true;
+          hls = {
+            enable = true;
+            installGhc = false;
+          };
         };
       };
     };

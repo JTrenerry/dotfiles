@@ -1,4 +1,4 @@
-{ pkgs }:
+{ pkgs, ... }:
 
 pkgs.writeShellScriptBin "move" ''
     CLASS=''${1^^}

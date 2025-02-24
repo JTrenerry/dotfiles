@@ -7,7 +7,6 @@
 {
   imports = [
     ./hardware.nix
-
     "${self}/modules/bootloader/systemd.nix"
     "${self}/modules/services/pipewire.nix"
     "${self}/modules/services/bluetooth.nix"
