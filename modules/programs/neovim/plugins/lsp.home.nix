@@ -2,9 +2,12 @@
   programs.nixvim = {
     plugins = {
       lsp-format.enable = true;
+      lsp-lines.enable = true;
 
       lsp = {
         enable = true;
+
+        inlayHints = true;
 
         keymaps = {
           silent = true;
@@ -29,8 +32,10 @@
           texlab.enable = true;
           hls = {
             enable = true;
-            installGhc = false;
+            installGhc = true;
           };
+          dafny.enable = true;
+          html.enable = true;
         };
       };
     };

@@ -16,7 +16,7 @@
     # To be moved and configed using nix
     firefox
     vesktop
-
+    upower
     # Containers
     docker-compose
 

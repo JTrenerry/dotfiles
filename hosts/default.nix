@@ -13,6 +13,8 @@
     "${self}/modules/programs/nh.nix" # nix helper
   ];
 
+  time.timeZone = "Australia/Brisbane";
+
   i18n = {
     defaultLocale = "en_GB.UTF-8";
     extraLocaleSettings = {

@@ -12,9 +12,6 @@
     "${self}/modules/services/bluetooth.nix"
   ];
 
-  time.timeZone = lib.mkForce "Australia/brisbane";
-  services.automatic-timezoned.enable = true;
-
   networking = {
     networkmanager.enable = true;
   };

@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   imports = [
     # TODO: more complex plugin configs should be a new file in this directory
@@ -26,6 +27,10 @@
       };
     };
 
+    extraPlugins = [
+      pkgs.vimPlugins."vim-loves-dafny"
+      pkgs.vimPlugins."bracey-vim"
+    ];
     plugins = {
       web-devicons.enable = true;
 
