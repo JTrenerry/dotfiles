@@ -15,6 +15,7 @@
   home.packages = with pkgs; [
     # To be moved and configed using nix
     firefox
+    thunderbird
     vesktop
     upower
     # Containers

@@ -2,10 +2,21 @@
   pkgs,
   inputs,
   config,
+  self,
+  systemSettings,
+  lib,
+  userSettings,
   ...
 }:
+let
+  inherit (lib) mkOption types;
+  palette = "${systemSettings.nixPath}/${userSettings.theme}.json";
+in
 {
-  imports = [ inputs.stylix.homeManagerModules.stylix ];
+  imports = [
+    inputs.stylix.homeManagerModules.stylix
+    "${self}/modules/theme/palette.home.nix"
+  ];
 
   stylix = {
     enable = true;
@@ -22,7 +33,7 @@
       hyprlock.enable = false;
     };
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/${userSettings.theme}.yaml";
     image = /home/jackson/.wallpaper;
   };
 }

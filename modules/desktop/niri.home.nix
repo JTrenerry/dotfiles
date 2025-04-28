@@ -55,16 +55,27 @@
     };
 
     layout = {
-      border = {
-        enable = false;
-        width = 2;
-      };
       gaps = 8;
       struts = {
         bottom = 1;
         top = 1;
         left = 1;
         right = 1;
+      };
+      always-center-single-column = true;
+      preset-column-widths = [
+        { proportion = 0.33333; }
+        { proportion = 0.5; }
+        { proportion = 0.66667; }
+        { proportion = 1.0; }
+      ];
+      default-column-width = {
+        proportion = 1.0;
+      };
+      focus-ring = {
+        enable = false;
+        width = 2;
+        active.color = config.palette.primaryAccent;
       };
     };
 
@@ -73,6 +84,7 @@
       # Basics
       "Mod+C".action = close-window;
       "Mod+F".action = fullscreen-window;
+      "Mod+R".action = switch-preset-column-width;
 
       # Commands
       "Mod+S".action = screenshot;
