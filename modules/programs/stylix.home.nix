@@ -15,7 +15,7 @@ in
 {
   imports = [
     inputs.stylix.homeManagerModules.stylix
-    "${self}/modules/theme/palette.home.nix"
+    "${self}/modules/themes/palette.home.nix"
   ];
 
   stylix = {

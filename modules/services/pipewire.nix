@@ -1,5 +1,5 @@
 _: {
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   nixpkgs.config.pulseaudio = true;
 
   security.rtkit.enable = true;

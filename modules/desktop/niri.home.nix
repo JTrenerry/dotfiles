@@ -74,7 +74,7 @@
       };
       focus-ring = {
         enable = false;
-        width = 2;
+        width = 0.5;
         active.color = config.palette.primaryAccent;
       };
     };
