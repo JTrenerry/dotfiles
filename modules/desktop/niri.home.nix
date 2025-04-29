@@ -55,7 +55,7 @@
     };
 
     layout = {
-      gaps = 8;
+      gaps = 5;
       struts = {
         bottom = 1;
         top = 1;
@@ -70,7 +70,7 @@
         { proportion = 1.0; }
       ];
       default-column-width = {
-        proportion = 1.0;
+        proportion = 0.75;
       };
       focus-ring = {
         enable = false;
@@ -78,6 +78,14 @@
         active.color = config.palette.primaryAccent;
       };
     };
+
+    window-rules = [
+      {
+        matches = [ { app-id = "^kitty$"; } ];
+        default-column-width.proportion = 0.5;
+      }
+    ];
+
 
     binds = with config.lib.niri.actions; rec {
       # Utils
