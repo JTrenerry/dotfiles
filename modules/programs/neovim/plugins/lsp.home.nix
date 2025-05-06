@@ -32,7 +32,7 @@
           texlab.enable = true;
           hls = {
             enable = true;
-            installGhc = true;
+            installGhc = false;
           };
           dafny.enable = true;
           html.enable = true;

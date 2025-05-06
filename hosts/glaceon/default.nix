@@ -10,6 +10,7 @@
     "${self}/modules/bootloader/systemd.nix"
     "${self}/modules/services/pipewire.nix"
     "${self}/modules/services/bluetooth.nix"
+    "${self}/modules/services/bolt.nix"
   ];
 
   networking = {

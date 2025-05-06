@@ -54,6 +54,7 @@
     kittysay
     uwuify
     lolcat
+    meow
     imagemagick
     tree
 
