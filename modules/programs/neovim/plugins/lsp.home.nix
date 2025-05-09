@@ -2,8 +2,6 @@
   programs.nixvim = {
     plugins = {
       lsp-format.enable = true;
-      lsp-lines.enable = true;
-
       lsp = {
         enable = true;
 
@@ -33,6 +31,7 @@
           hls = {
             enable = true;
             installGhc = false;
+
           };
           dafny.enable = true;
           html.enable = true;
