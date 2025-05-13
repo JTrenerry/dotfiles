@@ -36,7 +36,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     anyrun-nixos-options.url = "github:n3oney/anyrun-nixos-options";
-    commonix.url = "github:McArthur-Alford/commonix";;
+    commonix.url = "github:McArthur-Alford/commonix";
   };
 
   outputs = { self, nixpkgs, ... }@inputs:

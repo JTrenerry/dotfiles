@@ -161,14 +161,17 @@
     },
     "commonix": {
       "locked": {
-        "lastModified": 1736831537,
-        "narHash": "sha256-RivAzLxLbUkSUcAyQYmoo3CG6tfibmuTK7CfoN6R8OA=",
-        "path": "/home/jackson/Documents/Code/commonix",
-        "type": "path"
+        "lastModified": 1740104846,
+        "narHash": "sha256-o/tvjLhGJVEpRBwk80McKIkhRlaMqFQxciSSNSPaDoc=",
+        "owner": "McArthur-Alford",
+        "repo": "commonix",
+        "rev": "4f3c334c966602b11411db281a47291a63945322",
+        "type": "github"
       },
       "original": {
-        "path": "/home/jackson/Documents/Code/commonix",
-        "type": "path"
+        "owner": "McArthur-Alford",
+        "repo": "commonix",
+        "type": "github"
       }
     },
     "firefox-gnome-theme": {

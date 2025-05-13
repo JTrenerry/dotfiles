@@ -18,6 +18,8 @@
     thunderbird
     vesktop
     upower
+    qmk
+    via
     # Containers
     docker-compose
 
