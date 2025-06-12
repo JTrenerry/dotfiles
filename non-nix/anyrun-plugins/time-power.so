@@ -1,0 +1,60 @@
+use abi_stable::std_types::{RNone, ROption, RString, RVec};
+use anyrun_plugin::*;
+use chrono::Local;
+use std::fs;
+
+#[init]
+fn init(_config_dir: RString) {}
+
+#[info]
+fn info() -> PluginInfo {
+    PluginInfo {
+        name: "Time and Battery".into(),
+        icon: "preferences-system-time".into(), // You can change this
+    }
+}
+
+#[get_matches]
+fn get_matches(input: RString, _state: &mut ()) -> RVec<Match> {
+    let input = input.to_lowercase();
+    let mut matches = vec![];
+
+    if input == "t" || input.contains("time") {
+        let now = Local::now().format("%H:%M:%S").to_string();
+        matches.push(Match {
+            title: now.into(),
+            description: ROption::RSome("Current Time".into()),
+            use_pango: false,
+            icon: ROption::RSome("alarm".into()),
+            id: RNone,
+        });
+    }
+
+    if input == "p" || input.contains("power") || input.contains("battery") {
+        if let Some(battery) = get_battery_percentage() {
+            matches.push(Match {
+                title: format!("{}%", battery).into(),
+                description: ROption::RSome("Battery Level".into()),
+                use_pango: false,
+                icon: ROption::RSome("battery".into()),
+                id: RNone,
+            });
+        }
+    }
+
+    matches.into()
+}
+
+#[handler]
+fn handler(selection: Match) -> HandleResult {
+    HandleResult::Copy(selection.title.into_bytes())
+}
+
+/// Reads the battery percentage from `/sys/class/power_supply/BAT0/capacity`.
+fn get_battery_percentage() -> Option<u8> {
+    fs::read_to_string("/sys/class/power_supply/BAT0/capacity")
+        .ok()?
+        .trim()
+        .parse::<u8>()
+        .ok()
+}

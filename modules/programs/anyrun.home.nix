@@ -3,6 +3,7 @@
   inputs,
   pkgs,
   config,
+  self,
   ...
 }:
 {
@@ -36,6 +37,9 @@
           translate
           websearch
         ])
+        ++ [
+            ./${self}/non-nix/anyrun-plugins/time-battery.so
+        ]
         ++ [ inputs.anyrun-nixos-options.packages.${pkgs.system}.default ];
     };
 

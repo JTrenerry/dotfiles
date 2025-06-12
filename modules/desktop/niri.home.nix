@@ -138,6 +138,7 @@
       "Mod+Right".action = focus-column-right;
       "Mod+Up".action = focus-window-up;
       "Mod+Down".action = focus-window-down;
+      "Mod+G".action = toggle-overview;
 
       # Workspace Navigation
       "Mod+1".action = focus-workspace 1;

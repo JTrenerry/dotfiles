@@ -7,19 +7,23 @@
     "${self}/modules/programs/neovim/default.home.nix"
     "${self}/modules/shell/default.home.nix"
     #"${self}/modules/programs/firefox.home.nix"
-    # "${self}/modules/programs/vesktop.home.nix"
+    #"${self}/modules/programs/vesktop.home.nix"
 
     ./git.home.nix
   ];
 
   home.packages = with pkgs; [
-    # To be moved and configed using nix
+    # Temp fixes / classes / to be moved
+    wechat-uos
+    staruml
+
     firefox
     thunderbird
     vesktop
     upower
     qmk
     via
+
     # Containers
     docker-compose
 
@@ -50,7 +54,6 @@
     grimblast #screenshot
     hyprlock # lockscreen
     pinta   # Image editor
-    xfce.thunar   # File system visual
     foot   # Backup terminal
     swww   # Wallpaper
     kittysay

@@ -10,4 +10,8 @@
       };
     };
   };
+
+  home.sessionVariables = {
+    TERMINAL = "kitty";
+  };
 }

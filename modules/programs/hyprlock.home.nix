@@ -35,7 +35,7 @@ in
         # time
         {
           monitor = "";
-          text = "$time";
+          text = "$TIME";
           color = "${purple}";
           font_size = 90;
           font_family = "${blue}";

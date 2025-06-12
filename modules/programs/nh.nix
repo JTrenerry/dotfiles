@@ -15,6 +15,6 @@ in
   };
 
   environment.sessionVariables = {
-    FLAKE = lib.mkForce "${nix-path}";
+    NH_FLAKE = lib.mkForce "${nix-path}";
   };
 }
