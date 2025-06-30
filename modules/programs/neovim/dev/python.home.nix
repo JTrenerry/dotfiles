@@ -2,7 +2,7 @@
   home = {
     packages = with pkgs; [
       # Python
-      (python311.withPackages (
+      (python313.withPackages (
         ps:
           with ps; [
             # Misc
@@ -12,6 +12,9 @@
             # RL
             matplotlib
             numpy
+            pandas
+            langchain
+            sentence-transformers
           ]
       ))
 

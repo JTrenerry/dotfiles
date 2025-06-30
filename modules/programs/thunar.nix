@@ -16,5 +16,6 @@
 
   environment.systemPackages = with pkgs; [
     file-roller
+    openconnect # TODO: MOVE THIS SOMEWHERE ELSE WHEN I CONFIG THE VPNS
   ];
 }
