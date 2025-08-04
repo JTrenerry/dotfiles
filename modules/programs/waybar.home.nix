@@ -8,9 +8,10 @@
       mainBar = {
         layer = "top";
         position = "top";
-        height = 30;
+        height = 35;
 
         modules-left = [
+          "clock"
         ];
 
         modules-center = [
@@ -21,7 +22,6 @@
           "pulseaudio"
           "network"
           "battery"
-          "clock"
         ];
 
         "tray" = {
@@ -97,7 +97,6 @@
           on-click = "sleep 0.1 && pavucontrol";
         };
 
-        # TODO: make it look pretty
         "bluetooth" = {
           on-click = "sleep 0.1 && blueman-manager";
         };
@@ -130,12 +129,10 @@
       @define-color highlightMed    #44415a;
       @define-color highlightHigh   #56526e;
 
-      /* NOTE: The background */
       window#waybar {
         background: @base;
       }
 
-      /* NOTE: Workspaces */
       #workspaces {
         color: @iris;
         background: @surface;

@@ -8,6 +8,7 @@ in
     fetch = "fastfetch";
     neofetch = "fastfetch";
     die = "shutdown now";
+    kd = "kitty --detach";
    # NOTE Add more aliases here
 
 

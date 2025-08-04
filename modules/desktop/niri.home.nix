@@ -14,6 +14,7 @@
     "${self}/modules/services/hypridle.home.nix"
     "${self}/modules/programs/rofi.home.nix"
     "${self}/modules/programs/kitty.home.nix"
+    "${self}/modules/programs/waybar.home.nix"
     "${self}/modules/services/dunst.home.nix"
   ];
 
@@ -40,6 +41,7 @@
           "init"
         ];
       }
+      { command = [ "overview" ]; }
     ];
 
     input = {
@@ -86,6 +88,7 @@
       }
     ];
 
+    # overview.backdrop-color = config.palette.primaryAccent;
 
     binds = with config.lib.niri.actions; rec {
       # Utils

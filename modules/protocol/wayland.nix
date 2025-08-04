@@ -30,8 +30,8 @@
 
   xdg.portal = {
     enable = true;
-    # xdgOpenUsePortal = true;
-    config.common.default = "*";
+    xdgOpenUsePortal = true;
+    config.common.default = "gnome;gtk;wlr;";
     extraPortals = with pkgs; [
       xdg-desktop-portal-gnome
       xdg-desktop-portal-gtk

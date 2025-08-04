@@ -57,6 +57,7 @@
       nil
       wget
       curl
+      man
     ];
     variables = {
       SYSTEMD_EDITOR = "vim";

@@ -16,7 +16,6 @@
     # Temp fixes / classes / to be moved
     wechat-uos
     staruml
-    nodejs_24
 
     firefox
     thunderbird
@@ -24,6 +23,8 @@
     upower
     qmk
     via
+    obs-studio
+    slurp
 
     # Containers
     docker-compose
