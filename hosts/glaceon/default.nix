@@ -54,4 +54,5 @@
     hibernate.enable = true;
     hybrid-sleep.enable = true;
   };
+
 }

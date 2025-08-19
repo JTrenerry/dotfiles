@@ -1,4 +1,9 @@
-{ pkgs, self, userSettings, ... }:
+{
+  pkgs,
+  self,
+  userSettings,
+  ...
+}:
 {
   imports = [
     "${self}/modules/programs/spotify.home.nix"
@@ -17,6 +22,8 @@
     wechat-uos
     staruml
 
+    zoxide
+    nodejs_24
     firefox
     thunderbird
     vesktop
@@ -35,7 +42,7 @@
     # Office / Productivity / IDE
     jetbrains.idea-ultimate # Java IDE
     obsidian # Note taking app
-    libreoffice-fresh # Text editor
+    onlyoffice-desktopeditors
     zoom-us # Work
 
     # Misc
@@ -53,11 +60,11 @@
     pavucontrol # audio
     networkmanagerapplet # network
     postman # API docs
-    grimblast #screenshot
+    grimblast # screenshot
     hyprlock # lockscreen
-    pinta   # Image editor
-    foot   # Backup terminal
-    swww   # Wallpaper
+    pinta # Image editor
+    foot # Backup terminal
+    swww # Wallpaper
     kittysay
     uwuify
     lolcat

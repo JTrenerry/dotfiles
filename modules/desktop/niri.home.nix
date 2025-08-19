@@ -26,19 +26,18 @@
 
     spawn-at-startup = [
       {
-      command = [
-        "dbus-update-activation-environment"
-        "--systemd"
-        "WAYLAND_DISPLAY"
-        "XDG_CURRENT_DESKTOP"
-      ];
+        command = [
+          "dbus-update-activation-environment"
+          "--systemd"
+          "WAYLAND_DISPLAY"
+          "XDG_CURRENT_DESKTOP"
+        ];
       }
       { command = [ "${pkgs.xwayland-satellite}/bin/xwayland-satellite" ]; }
       { command = [ "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1" ]; }
       {
         command = [
-          "swww"
-          "init"
+          "swww-daemon"
         ];
       }
       { command = [ "overview" ]; }
@@ -88,7 +87,12 @@
       }
     ];
 
-    # overview.backdrop-color = config.palette.primaryAccent;
+    #    overview = {
+    #      workspace-shadow = {
+    #        enable = true;
+    #      };
+    #      backdrop-color = config.palette.primaryAccent;
+    #    };
 
     binds = with config.lib.niri.actions; rec {
       # Utils

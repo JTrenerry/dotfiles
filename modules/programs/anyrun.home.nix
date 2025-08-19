@@ -36,8 +36,7 @@
           shell
           translate
           websearch
-        ])
-        ++ [ inputs.anyrun-nixos-options.packages.${pkgs.system}.default ];
+        ]);
     };
 
     extraCss = # css

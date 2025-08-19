@@ -31,6 +31,11 @@
     };
   };
 
+  services.xserver = {
+    layout = "us,cn";
+    xkbOptions = "grp:alt_shift_toggle"; # Use Alt+Shift to switch layouts
+  };
+
   documentation = {
     enable = true;
     nixos.enable = true;
@@ -52,6 +57,7 @@
   environment = {
     systemPackages = with pkgs; [
       git
+      git-lfs
       vim
       neovim
       nil

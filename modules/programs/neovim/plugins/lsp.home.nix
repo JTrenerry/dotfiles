@@ -3,13 +3,13 @@
     plugins = {
       lsp-format.enable = true;
       lsp-lines.enable = true;
+      lsp-signature.enable = true;
       lsp = {
         enable = true;
 
         inlayHints = true;
 
         keymaps = {
-          silent = true;
           diagnostic = {
             # Navigate in diagnostics
             "<leader>k" = "goto_prev";
@@ -27,6 +27,8 @@
         };
 
         servers = {
+          eslint.enable = true;
+          ts_ls.enable = true;
           clangd.enable = true;
           texlab.enable = true;
           hls = {

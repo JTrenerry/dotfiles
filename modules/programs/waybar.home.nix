@@ -81,17 +81,16 @@
           format-source = " {volume}%";
           format-source-muted = " ";
           format-icons = {
-            headphone = " ";
-            /* TODO: get a better emojis or nerdfont? */
+            headphone = "󰋋 ";
             hands-free = " ";
             headset = " ";
             phone = " ";
             portable = " ";
             car = " ";
             default = [
-              " "
-              " "
-              " "
+              "󰕿 "
+              "󰖀 "
+              "󱄠 "
             ];
           };
           on-click = "sleep 0.1 && pavucontrol";
