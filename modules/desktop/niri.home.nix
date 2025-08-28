@@ -45,7 +45,7 @@
 
     input = {
       focus-follows-mouse.enable = true;
-      warp-mouse-to-focus = true;
+      warp-mouse-to-focus.enable = true;
     };
 
     outputs."eDP-1".scale = 1;

@@ -1,4 +1,10 @@
-{ pkgs, lib, config, self, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  self,
+  ...
+}:
 let
   inherit (lib) concatStringsSep getExe;
   sessionData = config.services.displayManager.sessionData.desktops;

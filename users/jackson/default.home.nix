@@ -9,9 +9,10 @@
     "${self}/modules/programs/spotify.home.nix"
     "${self}/modules/programs/fastfetch.home.nix"
     "${self}/modules/programs/cava.home.nix"
-    "${self}/modules/programs/neovim/default.home.nix"
+    "${self}/modules/programs/helix.home.nix"
     "${self}/modules/shell/default.home.nix"
     #"${self}/modules/programs/firefox.home.nix"
+    #"${self}/modules/programs/neovim/default.home.nix"
     #"${self}/modules/programs/vesktop.home.nix"
 
     ./git.home.nix
