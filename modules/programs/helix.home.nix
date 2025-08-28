@@ -1,10 +1,4 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}:
-with config.lib.stylix.colors;
+{ pkgs, ... }:
 {
   home.shellAliases = {
     vim = "hx";
@@ -15,7 +9,6 @@ with config.lib.stylix.colors;
   programs.helix = {
     enable = true;
     settings = {
-      # theme = lib.mkForce "eva";
       editor.undercurl = true;
       editor.true-color = true;
       editor.lsp.display-inlay-hints = true;
@@ -28,14 +21,25 @@ with config.lib.stylix.colors;
     languages.language = [
       {
         name = "nix";
+        scope = "source.nix";
+        file-types = [ "nix" ];
         auto-format = true;
         formatter.command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
         language-servers = [ "nil" ];
       }
       {
         name = "toml";
+        scope = "source.toml";
+        file-types = [ "toml" ];
         auto-format = true;
         language-servers = [ "taplo" ];
+      }
+      {
+        name = "json";
+        scope = "source.json";
+        file-types = [ "json" ];
+        auto-format = true;
+        language-servers = [ "json" ];
       }
     ];
 
@@ -55,6 +59,9 @@ with config.lib.stylix.colors;
           "lsp"
           "stdio"
         ];
+      };
+      json = {
+        command = "${pkgs.nodePackages.vscode-json-languageserver}/bin/vscode-json-languageserver";
       };
     };
 

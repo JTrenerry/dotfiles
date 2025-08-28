@@ -11,7 +11,6 @@
   imports = [
     inputs.nix-index-database.homeModules.nix-index
 
-    "${self}/modules/programs/stylix.home.nix"
     "${self}/modules/programs/anyrun.home.nix"
   ];
 
