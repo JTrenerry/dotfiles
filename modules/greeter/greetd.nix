@@ -1,17 +1,17 @@
-{ pkgs, systemSettings, ... }:
+{ ... }:
 
 {
   services = {
     greetd = {
       enable = true;
-
-      settings = rec {
-      };
     };
   };
 
   systemd.services.greetd = {
     serviceConfig.Type = "idle";
-    unitConfig.After = [ "docker.service" ];
+    unitConfig.After = [
+      "docker.service"
+      "nix-gc.service"
+    ];
   };
 }
