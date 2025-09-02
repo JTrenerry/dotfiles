@@ -9,6 +9,7 @@
   programs.helix = {
     enable = true;
     settings = {
+      theme = "rose_pine_moon";
       editor.undercurl = true;
       editor.true-color = true;
       editor.lsp.display-inlay-hints = true;
@@ -62,13 +63,6 @@
       };
       json = {
         command = "${pkgs.nodePackages.vscode-json-languageserver}/bin/vscode-json-languageserver";
-      };
-    };
-
-    themes = {
-      rose-pine-moon = {
-        inherits = "stylix";
-        ui.background = "{}";
       };
     };
   };

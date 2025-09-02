@@ -33,6 +33,7 @@
     via
     obs-studio
     slurp
+    glfw2
 
     # Containers
     docker-compose
