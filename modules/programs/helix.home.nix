@@ -27,6 +27,10 @@
         auto-format = true;
         formatter.command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
         language-servers = [ "nil" ];
+        indent = {
+          tab-width = 2;
+          unit = " ";
+        };
       }
       {
         name = "toml";

@@ -1,7 +1,6 @@
 {
   pkgs,
   self,
-  userSettings,
   ...
 }:
 {
@@ -19,69 +18,49 @@
   ];
 
   home.packages = with pkgs; [
-    # Temp fixes / classes / to be moved
-    wechat-uos
-    staruml
-
-    zoxide
-    nodejs_24
-    firefox
-    thunderbird
-    vesktop
-    upower
-    qmk
-    via
-    obs-studio
-    slurp
-    glfw2
-
-    # Containers
-    docker-compose
-
-    # SSH
-    cloudflared
-
-    # Office / Productivity / IDE
-    jetbrains.idea-ultimate # Java IDE
-    obsidian # Note taking app
-    onlyoffice-desktopeditors
-    zoom-us # Work
-
-    # Misc
-    unzip
-    zip
-
-    btop
-
-    brightnessctl
-
-    blueman # bluetooth
-    bluetuith
-    bluez
-
+    wechat-uos # TODO: move
+    zoxide # Better cd
+    upower # Power management
+    obs-studio # TODO: move
+    docker-compose # Containers
+    cloudflared # SSH through cf tunnels
+    tree # Directory Visualisation
+    acpi # Battery
+    unzip # Unzip
+    zip # Zip
+    btop # Computer Stats
+    blueman # Bluetooth
+    bluetuith # Bluetooth
+    bluez # Bluetooth
     pavucontrol # audio
     networkmanagerapplet # network
-    postman # API docs
-    grimblast # screenshot
-    hyprlock # lockscreen
-    pinta # Image editor
-    foot # Backup terminal
-    swww # Wallpaper
+
+    # Cat related programs
     kittysay
     uwuify
     lolcat
     meow
-    imagemagick
-    tree
 
-    rpi-imager
-    acpi
-    platformio
+    jetbrains.idea-ultimate # TODO: moveJava IDE
+    obsidian # TODO: Note taking app
+    zoom-us # TODO: move
+    postman # TODO: move
+    brightnessctl # Brightness stuff TODO: move to desktop?
+    firefox # TODO: move
+    thunderbird # TODO: move
+    vesktop # TODO: move
+    grimblast # TODO: move Screenshot
+    slurp # TODO: move Screenshot
+    hyprlock # TODO: move Lockscreen
+    pinta # TODO: move Image editor
+    foot # TODO: move Backup terminal
+    swww # TODO: move Wallpaper
   ];
 
   gtk = {
     enable = true;
 
+    # TODO: Hard coded themeing stuff, move to a variable in theme
     iconTheme = {
       package = pkgs.rose-pine-icon-theme;
       name = "rose-pine-moon";
