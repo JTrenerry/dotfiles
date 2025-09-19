@@ -34,14 +34,4 @@
     lolcat
     meow
   ];
-
-  gtk = {
-    enable = true;
-
-    # TODO: Hard coded themeing stuff, move to a variable in theme
-    iconTheme = {
-      package = pkgs.rose-pine-icon-theme;
-      name = "rose-pine-moon";
-    };
-  };
 }

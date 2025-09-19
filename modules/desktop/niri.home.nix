@@ -87,12 +87,12 @@
       }
     ];
 
-    #    overview = {
-    #      workspace-shadow = {
-    #        enable = true;
-    #      };
-    #      backdrop-color = config.palette.primaryAccent;
-    #    };
+    overview = {
+      workspace-shadow = {
+        enable = true;
+      };
+      backdrop-color = config.palette.base00;
+    };
 
     binds = with config.lib.niri.actions; rec {
       # Utils

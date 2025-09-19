@@ -6,6 +6,7 @@
 {
   imports = [
     "${self}/modules/programs/spotify.home.nix"
+    "${self}/modules/programs/firefox.home.nix"
   ];
 
   home.packages = with pkgs; [
@@ -16,7 +17,6 @@
     zoom-us
     postman
     brightnessctl # Brightness stuff to desktop?
-    firefox
     thunderbird
     vesktop
     grimblast # Screenshot
@@ -26,6 +26,7 @@
     foot # Backup terminal
     swww # Wallpaper
     zathura # pdf viewer
+    graphviz
   ];
 
   gtk = {

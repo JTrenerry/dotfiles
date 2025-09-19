@@ -161,11 +161,11 @@
     },
     "commonix": {
       "locked": {
-        "lastModified": 1740104846,
-        "narHash": "sha256-o/tvjLhGJVEpRBwk80McKIkhRlaMqFQxciSSNSPaDoc=",
+        "lastModified": 1757057634,
+        "narHash": "sha256-Gf4nTbHszyUY3HNMhCwA3TYD/esgjCbZJON3zh4nZQ0=",
         "owner": "McArthur-Alford",
         "repo": "commonix",
-        "rev": "4f3c334c966602b11411db281a47291a63945322",
+        "rev": "5a1ea20a80a7674802810354937eaa57dad86edd",
         "type": "github"
       },
       "original": {
@@ -267,6 +267,27 @@
       }
     },
     "flake-parts_4": {
+      "inputs": {
+        "nixpkgs-lib": [
+          "nur",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1733312601,
+        "narHash": "sha256-4pDvzqnegAfRkPwO3wmwBhVi/Sye1mzps0zHWYnP88c=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "205b12d8b7cd4802fbcb8e8ef6a0f1408781a4f9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_5": {
       "inputs": {
         "nixpkgs-lib": [
           "stylix",
@@ -902,6 +923,22 @@
     },
     "nixpkgs_6": {
       "locked": {
+        "lastModified": 1756787288,
+        "narHash": "sha256-rw/PHa1cqiePdBxhF66V7R+WAP8WekQ0mCDG4CFqT8Y=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "d0fc30899600b9b3466ddb260fd83deb486c32f1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_7": {
+      "locked": {
         "lastModified": 1751792365,
         "narHash": "sha256-J1kI6oAj25IG4EdVlg2hQz8NZTBNYvIS0l4wpr9KcUo=",
         "owner": "NixOS",
@@ -940,6 +977,25 @@
       }
     },
     "nur": {
+      "inputs": {
+        "flake-parts": "flake-parts_4",
+        "nixpkgs": "nixpkgs_6"
+      },
+      "locked": {
+        "lastModified": 1757054560,
+        "narHash": "sha256-D5hwoY9zt4k5Aob/6pw5GcxaujjDuQb4yrfUbkbT96E=",
+        "owner": "nix-community",
+        "repo": "NUR",
+        "rev": "a978ed5ae76324381a216c2f42bcd46cc33506ed",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "NUR",
+        "type": "github"
+      }
+    },
+    "nur_2": {
       "inputs": {
         "flake-parts": [
           "stylix",
@@ -1023,6 +1079,7 @@
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs_5",
         "nixvim": "nixvim",
+        "nur": "nur",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix"
       }
@@ -1055,10 +1112,10 @@
         "base16-helix": "base16-helix",
         "base16-vim": "base16-vim",
         "firefox-gnome-theme": "firefox-gnome-theme",
-        "flake-parts": "flake-parts_4",
+        "flake-parts": "flake-parts_5",
         "gnome-shell": "gnome-shell",
-        "nixpkgs": "nixpkgs_6",
-        "nur": "nur",
+        "nixpkgs": "nixpkgs_7",
+        "nur": "nur_2",
         "systems": "systems_6",
         "tinted-foot": "tinted-foot",
         "tinted-kitty": "tinted-kitty",

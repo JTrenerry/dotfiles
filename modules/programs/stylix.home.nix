@@ -20,7 +20,6 @@
       firefox.enable = false;
       rofi.enable = false;
       dunst.enable = false;
-      kitty.enable = false;
       nixvim.enable = false;
       waybar.enable = false;
       hyprlock.enable = false;
