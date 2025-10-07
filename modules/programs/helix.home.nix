@@ -9,7 +9,7 @@
   programs.helix = {
     enable = true;
     settings = {
-      theme = "rose_pine_moon";
+      theme = "rose_pine_moon"; # TODO: hard coded
       editor.undercurl = true;
       editor.true-color = true;
       editor.lsp.display-inlay-hints = true;
