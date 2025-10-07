@@ -6,10 +6,10 @@
 {
   imports = [
     "${self}/modules/programs/spotify.home.nix"
-    "${self}/modules/programs/firefox.home.nix"
   ];
 
   home.packages = with pkgs; [
+    firefox
     wechat-uos
     obs-studio
     jetbrains.idea-ultimate # Java IDE

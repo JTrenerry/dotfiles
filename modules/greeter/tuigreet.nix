@@ -12,7 +12,7 @@ let
     "${sessionData}/share/wayland-sessions"
     "${sessionData}/share/xsessions"
   ];
-  tuigreet = getExe pkgs.greetd.tuigreet;
+  tuigreet = getExe pkgs.tuigreet;
 in
 {
   imports = [

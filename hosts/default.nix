@@ -31,9 +31,8 @@
     };
   };
 
-  services.xserver = {
-    layout = "us,cn";
-    xkbOptions = "grp:alt_shift_toggle"; # Use Alt+Shift to switch layouts
+  services.xserver.xkb = {
+    layout = "us";
   };
 
   documentation = {
