@@ -40,6 +40,13 @@
           "swww-daemon"
         ];
       }
+      {
+        command = [
+          "swww"
+          "img"
+          "~/.wallpaper"
+        ];
+      }
       { command = [ "overview" ]; }
     ];
 

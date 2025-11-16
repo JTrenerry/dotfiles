@@ -19,7 +19,10 @@
     bash = {
       enable = true;
 
-      bashrcExtra = ''eval "$(direnv hook bash)"'';
+      bashrcExtra = ''
+        eval "$(direnv hook bash)"
+        eval "$(terminal-wakatime init)"
+      '';
     };
   };
 }
