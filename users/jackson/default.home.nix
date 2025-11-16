@@ -33,5 +33,7 @@
     uwuify
     lolcat
     meow
+
+    python313Packages.pip
   ];
 }

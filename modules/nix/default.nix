@@ -23,24 +23,37 @@
       trusted-users = systemSettings.trustedUsers;
     };
 
-    registry.devtemplates = {
-      to = {
-        owner = "JTrenerry";
-        repo = "nix-templates";
-        type = "github";
+    registry = {
+      devtemplates = {
+        to = {
+          owner = "JTrenerry";
+          repo = "nix-templates";
+          type = "github";
+        };
+        from = {
+          id = "devtemplates";
+          type = "indirect";
+        };
       };
-      from = {
-        id = "devtemplates";
-        type = "indirect";
+
+      pac-nix = {
+        to = {
+          owner = "katrinafyi";
+          repo = "pac-nix";
+          type = "github";
+        };
+        from = {
+          id = "pac";
+          type = "indirect";
+        };
       };
     };
   };
 
   nixpkgs = {
     hostPlatform = lib.mkDefault systemSettings.system;
-    overlays =
-      [
-      ];
+    overlays = [
+    ];
     config = {
       allowUnfree = true;
     };

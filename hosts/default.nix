@@ -11,7 +11,7 @@
     "${self}/modules/nix" # Configuration of nix itself!
     "${self}/modules/scripts" # Useful scripts to have on path
     "${self}/modules/programs/nh.nix" # nix helper
-    "${self}/modules/programs/thunar.nix"
+    "${self}/modules/programs/thunar.nix" # File manager
   ];
 
   time.timeZone = "Australia/Brisbane";
@@ -31,8 +31,15 @@
     };
   };
 
-  services.xserver.xkb = {
-    layout = "us";
+  services.xserver = {
+    xkb.layout = "us";
+    libinput = {
+      enable = true;
+      mouse = {
+        accelProfile = "flat";
+        accelSpeed = 0.0;
+      };
+    };
   };
 
   documentation = {

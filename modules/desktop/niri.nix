@@ -1,4 +1,9 @@
-{ self, userSettings, pkgs, ... }:
+{
+  self,
+  userSettings,
+  pkgs,
+  ...
+}:
 
 {
   imports = [

@@ -38,6 +38,7 @@
     anyrun-nixos-options.url = "github:n3oney/anyrun-nixos-options";
     nur.url = "github:nix-community/NUR";
     commonix.url = "github:McArthur-Alford/commonix";
+    terminal-wakatime.url = "github:hackclub/terminal-wakatime";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: (inputs.commonix.generateOutputs { inherit self inputs; });

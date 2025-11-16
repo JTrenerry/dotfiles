@@ -1,4 +1,4 @@
-{ pkgs, config, ...}:
+{ pkgs, config, ... }:
 
 {
   programs = {
@@ -18,7 +18,6 @@
         modes = "drun,recursivebrowser";
         show-icons = true;
       };
-      package = pkgs.rofi-wayland;
     };
   };
 }

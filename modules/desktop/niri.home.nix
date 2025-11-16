@@ -48,7 +48,16 @@
       warp-mouse-to-focus.enable = true;
     };
 
-    outputs."eDP-1".scale = 1;
+    outputs = {
+      # Laptop
+      "Chimei Innolux Corporation 0x1614 Unknown" = {
+        scale = 1;
+      };
+      # Vertical home monitor
+      "KOGAN AUSTRALIA PTY LTD KAMN24FG18VA Unknown" = {
+        transform.rotation = 90;
+      };
+    };
 
     environment = {
       QT_QPA_PLATFORM = "wayland";
@@ -102,7 +111,7 @@
       "Mod+R".action = switch-preset-column-width;
 
       # Commands
-      "Mod+S".action = screenshot;
+      "Mod+S".action.screenshot = [ ];
       "Mod+Shift+Slash".action = show-hotkey-overlay;
 
       "XF86AudioRaiseVolume" = {

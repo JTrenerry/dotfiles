@@ -29,38 +29,62 @@
       showResultsImmediately = true;
       maxEntries = 10;
 
-      plugins =
-        (with inputs.anyrun.packages.${pkgs.system}; [
+      plugins = (
+        with inputs.anyrun.packages.${pkgs.system};
+        [
           applications
           rink
           shell
           translate
           websearch
-        ]);
+        ]
+      );
     };
 
-    extraCss = # css
-      ''
-        * {
-          all: unset;
-          font-size: 1.2rem;
-        }
-
-        #window,
-        #match,
-        #entry,
-        #plugin,
-        #main {
+    extraCss = ''
+      window {
           background: transparent;
-        }
+      }
 
-        box#main {
-          background: "#${config.lib.stylix.colors.base02}";
-          border-radius: 10px;
-          padding: 12px;
-        }
-      '';
+      text {
+          padding: 10px 14px;
+          background: #${config.lib.stylix.colors.base00};
+          color: #${config.lib.stylix.colors.base05};
+          
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          
+          font-size: 18px;
 
+          border: 2px solid transparent;
+          outline-offset: -2px;
+      }
+
+      text:focus {
+          outline: 2px solid #${config.palette.primaryAccent};
+      }
+
+      .match {
+          padding: 1px;
+          border-radius: 8px;
+          border-color: #${config.lib.stylix.colors.base02};
+
+      .match:hover, .match:selected {
+          background: #${config.lib.stylix.colors.base02};
+      }
+
+      .match .title {
+          font-size: 16px;
+          font-weight: 500;
+          color: #${config.lib.stylix.colors.base05};
+      }
+
+      .match .description {
+          font-size: 13px;
+          color: #${config.lib.stylix.colors.base03};
+          margin-top: 2px;
+      }
+    '';
     extraConfigFiles."nixos-options.ron".text =
       let
         nixos-options = osConfig.system.build.manual.optionsJSON + "/share/doc/nixos/options.json";
