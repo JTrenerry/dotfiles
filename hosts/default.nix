@@ -31,8 +31,8 @@
     };
   };
 
-  services.xserver = {
-    xkb.layout = "us";
+  services = {
+    xserver.xkb.layout = "us";
     libinput = {
       enable = true;
       mouse = {

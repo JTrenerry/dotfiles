@@ -120,6 +120,7 @@
       # Commands
       "Mod+S".action.screenshot = [ ];
       "Mod+Shift+Slash".action = show-hotkey-overlay;
+      "Mod+G".action = toggle-window-floating;
 
       "XF86AudioRaiseVolume" = {
         allow-when-locked = true;
@@ -153,15 +154,15 @@
 
       # Navigation:
       "Mod+E".action = center-column;
+
       "Mod+H".action = focus-column-left-or-last;
+      "Mod+Left".action = focus-column-left-or-last;
       "Mod+L".action = focus-column-right-or-first;
+      "Mod+Right".action = focus-column-right-or-first;
       "Mod+K".action = focus-window-or-workspace-up;
+      "Mod+Up".action = focus-window-or-workspace-up;
       "Mod+J".action = focus-window-or-workspace-down;
-      "Mod+Left".action = focus-column-left;
-      "Mod+Right".action = focus-column-right;
-      "Mod+Up".action = focus-window-up;
-      "Mod+Down".action = focus-window-down;
-      "Mod+G".action = toggle-overview;
+      "Mod+Down".action = focus-window-or-workspace-down;
 
       # Workspace Navigation
       "Mod+1".action = focus-workspace 1;
@@ -185,19 +186,24 @@
       "Mod+Comma".action = consume-or-expel-window-left;
 
       "Mod+Shift+H".action = move-column-left;
-      "Mod+Shift+L".action = move-column-right;
-      "Mod+Shift+K".action = move-window-up-or-to-workspace-up;
-      "Mod+Shift+J".action = move-window-down-or-to-workspace-down;
       "Mod+Shift+Left".action = move-column-left;
+      "Mod+Shift+L".action = move-column-right;
       "Mod+Shift+Right".action = move-column-right;
+      "Mod+Shift+K".action = move-window-up-or-to-workspace-up;
       "Mod+Shift+Up".action = move-window-up;
+      "Mod+Shift+J".action = move-window-down-or-to-workspace-down;
       "Mod+Shift+Down".action = move-window-down;
-      "Mod+Ctrl+K".action = move-column-to-workspace-up;
+
       "Mod+Ctrl+J".action = move-column-to-workspace-down;
+      "Mod+Ctrl+Down".action = move-column-to-workspace-up;
+      "Mod+Ctrl+K".action = move-column-to-workspace-up;
+      "Mod+Ctrl+Up".action = move-column-to-workspace-down;
 
       # Rearranging Workspaces
       "Mod+Ctrl+Shift+J".action = move-workspace-down;
+      "Mod+Ctrl+Shift+Down".action = move-workspace-down;
       "Mod+Ctrl+Shift+K".action = move-workspace-up;
+      "Mod+Ctrl+Shift+Up".action = move-workspace-up;
 
       # Resizing Windows:
       "Mod+Minus".action = set-column-width "-5%";
