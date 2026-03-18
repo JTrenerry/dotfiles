@@ -27,6 +27,9 @@
     swww # Wallpaper
     zathura # pdf viewer
     graphviz
+    gcc
+    hotspot
+    perf
   ];
 
   gtk = {

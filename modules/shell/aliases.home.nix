@@ -9,6 +9,7 @@ in
     fetch = "brrtfetch --multiplier 90 --fps 5 ${self}/assets/brrtfetch.gif";
     die = "shutdown now";
     kd = "kitty --detach";
+    cpc = "wl-copy";
     # NOTE Add more aliases here
 
     # NOTE THE DOTS

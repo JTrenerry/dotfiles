@@ -1,11 +1,5 @@
 { pkgs, ... }:
 {
-  home.shellAliases = {
-    vim = "hx";
-    nvim = "hx";
-    vi = "hx";
-  };
-
   programs.helix = {
     enable = true;
     settings = {

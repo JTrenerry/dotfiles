@@ -72,9 +72,9 @@
       man
     ];
     variables = {
-      SYSTEMD_EDITOR = "vim";
-      EDITOR = "vim";
-      VISUAL = "vim";
+      SYSTEMD_EDITOR = "hx";
+      EDITOR = "hx";
+      VISUAL = "hx";
     };
   };
 

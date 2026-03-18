@@ -8,6 +8,7 @@
     "${self}/modules/programs/fastfetch.home.nix"
     "${self}/modules/programs/cava.home.nix"
     "${self}/modules/programs/helix.home.nix"
+    "${self}/modules/programs/neovim/default.home.nix"
     "${self}/modules/shell/default.home.nix"
     ./git.home.nix
   ];
